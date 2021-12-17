@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Lista | Reservar Entradas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon"
+    href="https://mir-s3-cdn-cf.behance.net/projects/404/76d70337835251.Y3JvcCwxNzcyLDEzODQsMCwyNDA.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body
+  style="padding-top: 4rem; background-image: url(https://viniloblog.com/wp-content/uploads/2020/04/cine-estrenos-2020.jpg); background-repeat: no-repeat; background-size: cover;"
+  class="min-vh-100 d-flex flex-column justify-content-between">
+  <%- include('layout/menu'); %>
+    <!-- Agregamos el menú, de forma simplificada-->
+
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header text-center bg-danger text-light display-4">LISTA DE REVERVAS DE ENTRADAS</div>
+        <div class="card-body">
+
+          <table class="table table-bordered table-hover">
+            <thead>
+              <td>IDCLIENTE</td>
+              <td>NOMBRE Y APELLIDO</td>
+              <td>DNI</td>
+              <td>EDAD</td>
+              <td>NOMBRE DE LA PELICULA</td>
+              <td>HORARIO</td>
+              <td>FECHA</td>
+              <td>ACCIONES</td>
+            </thead>
+            <tbody>
+              <% if(dataEntradas.length){ %>
+                <% dataEntradas.forEach( item=>{ %>
+                  <tr>
+                    <td>
+                      <%= item.idCliente %>
+                    </td>
+                    <td>
+                      <%= item.nombApellido %>
+                    </td>
+                    <td>
+                      <%= item.dni %>
+                    </td>
+                    <td>
+                      <%= item.edad %>
+                    </td>
+                    <td>
+                      <%= item.nombPelicula %>
+                    </td>
+                    <td>
+                      <%= item.horario %>
+                    </td>
+                    <td>
+                      <%= item.fecha %>
+                    </td>
+                    <td><a class="btn btn-warning" href="/entradas/form/<%= item.idCliente %>">EDITAR</a></td>
+                  </tr>
+                  <% }) %>
+                    <% } %>
+            </tbody>
+          </table>
+          <a class="btn btn-success" href="/entradas/form/0">REGISTRARSE</a>
+        </div>
+      </div>
+    </div>
+    <%- include('layout/footer'); %>
+</body>
+
+</html>

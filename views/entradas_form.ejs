@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Formulario | Reservar Entradas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon"
+        href="https://mir-s3-cdn-cf.behance.net/projects/404/76d70337835251.Y3JvcCwxNzcyLDEzODQsMCwyNDA.png">
+    <!-- bootstrap para la página-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body
+    style="padding-top: 4rem; background-image: url(https://legismusic.com/wp-content/uploads/2016/04/music-for-movies-and-trailers.jpg); background-repeat: no-repeat; background-size: cover;"
+    class="min-vh-100 d-flex flex-column justify-content-between">
+    <%- include('layout/menu'); %>
+        <div class="container mt-5">
+            <div class="card">
+
+                <div class="card-header text-center bg-danger text-light display-4">REGISTRO DE ENTRADAS</div>
+                <div class="card-body">
+                    <form action="/entradas/save" method="post">
+                        <div class="form-group">
+                            <label for="txtidCliente">IDCLIENTE</label>
+                            <input type="text" class="form-control" id="txtidCliente" name="idCliente"
+                                value="<%= entradasForm.idCliente %>" readonly> <!-- readonly = solo lectura -->
+                        </div>
+                        <div class="form-group">
+                            <label for="txtnombApellido">NOMBRES Y APELLIDOS</label>
+                            <input type="text" class="form-control" id="txtnombApellido" name="nombApellido"
+                                value="<%= entradasForm.nombApellido %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtdni">DNI</label>
+                            <input type="text" class="form-control" id="txtdni" name="dni"
+                                value="<%= entradasForm.dni %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtedad">EDAD</label>
+                            <input type="text" class="form-control" id="txtedad" name="edad"
+                                value="<%= entradasForm.edad %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtnombPelicula">NOMBRE DE LA PELICULA</label>
+                            <select class="form-control" id="txtnombPelicula" name="nombPelicula"
+                                value="<%= entradasForm.nombPelicula %>">
+                                <option>ESCOGER PELICULA</option>
+                                <option>Spiderman: Sin camino a casa</option>
+                                <option>Morbius</option>
+                                <option>Rubber: El neumático asesino</option>
+                                <option>She-Hulk</option>
+                                <option>One piece: STampede</option>
+                                <option>Gingerdeadman: Galleta asesina</option>
+                                <option>Evil Dead</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txthorario">HORARIO</label>
+                            <select class="form-control" id="txthorario" name="horario"
+                                value="<%= entradasForm.horario %>">
+                                <option>ESCOGER TURNO</option>
+                                <option>Mañana</option>
+                                <option>Tarde</option>
+                                <option>Noche</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtfecha">FECHA</label>
+                            <input type="date" class="form-control" id="txtfecha" name="fecha"
+                                value="<%= entradasForm.fecha %>">
+                        </div>
+                        <input type="submit" class="btn btn-success" value="GUARDAR">
+                        <a href="/entradas/list" class="btn btn-danger">CANCELAR</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('layout/footer'); %>
+</body>

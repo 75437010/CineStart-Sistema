@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inicio | CineStart</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon"
+        href="https://mir-s3-cdn-cf.behance.net/projects/404/76d70337835251.Y3JvcCwxNzcyLDEzODQsMCwyNDA.png">
+    <!-- bootstrap para la página-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <!-- BoostrapJS de la página -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We' crossorigin='anonymous'>
+    <!--Poppis-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <!--Josefin-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .Fondo {
+        background-image: linear-gradient(150deg, #00000079 20%, #00000055 100%), url(http://kkoma.net/web/product/big/201902/5ccc8f8580d150bb9b9fd1527d0a3e4f.jpg);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .titular {
+        font-size: 3.2em;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+    }
+
+    .Fondo_Ofrece {
+        background-image: rgb(238, 241, 40);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .Fondo_01 {
+        background-image: url(https://www.tuexperto.com/wp-content/uploads/2018/12/samsung-onyx-led-950x565.jpg);
+        border-radius: 50%;
+    }
+
+    .Fondo_02 {
+        background-image: url(https://2.bp.blogspot.com/-QDwY0lCT3Pc/V5ZY4g7aKXI/AAAAAAAAAZA/v0YBFFeaN0oPhGowmCN6s23EyplRF-8JwCEw/s1600/CONFITERIA-CINESTAR-TACNA.jpg);
+        border-radius: 50%;
+    }
+
+    .Fondo_03 {
+        background-image: url(http://www.bealefss.com/wp-content/uploads/2019/01/IMG_2880-610x407.jpg);
+        border-radius: 50%;
+    }
+
+    .Boton_01 {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        background: #e96656;
+        color: white;
+        border-radius: 1.4em;
+    }
+
+    .Boton_01:hover {
+        color: white !important;
+        background: #e74b37;
+    }
+
+    .Boton_02 {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        background: #f7ec54;
+        color: white;
+        border-radius: 1.4em;
+    }
+
+    .Boton_02:hover {
+        color: white !important;
+        background: #f8ea23;
+    }
+
+    .IMG_Fondo {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 3rem;
+        background-image: rgb(255, 255, 255);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 0.2em solid rgb(156, 11, 11);
+    }
+
+    .Fondo_Img_1 {
+        background-image: url(https://1.bp.blogspot.com/-2Lq6Uso8eyA/YOTUH3dzEuI/AAAAAAAAJqw/c22-weXKmwgABRuOPyKh6Eud8RkhOLn1ACLcBGAsYHQ/s620/cines-espana-abiertos-kqM-620x349%2540abc.jpg);
+    }
+
+    .Fondo_Img_2 {
+        background-image: url(https://elcomercio.pe/resizer/LIp0BDeFlXIY_9qp9DHjXm_K48w=/980x/smart/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/4I44SECO4ZHCFCLVTJSJJB5RC4.JPG);
+    }
+
+    .Fondo_Img_3 {
+        background-image: url(https://gestion.pe/resizer/VQrbQPOfl8JqecbWPo1t6nHUm08=/980x528/smart/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/KG4LYHBZKJFJVDZVEMLQK3232U.jpg);
+    }
+
+    .Fondo_Img_4 {
+        background-image: url(https://www.laguiademonteria.co/wp-content/uploads/2020/10/Minsalud-expide-nuevo-protocolo-de-bioseguridad-para-cines-y-teatros.jpeg);
+    }
+
+
+    .Fondo_Footer {
+        background: url(https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/117393062_617490298971159_663403622579776158_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=e3f864&_nc_ohc=d82m_-wlwQQAX8rPcpI&_nc_ht=scontent.flim2-2.fna&oh=00_AT-2JLg3jbDOAcCi4xuuGumukhVQVanEGABvvELtUelv_w&oe=61DF18E0) 50% 50% no-repeat fixed;
+        background-size: cover;
+    }
+</style>
+
+<body style="padding-top: 4rem;" class="min-vh-100 d-flex flex-column justify-content-between">
+    <%- include('layout/menu'); %>
+
+        <div class="container-xxl">
+
+            <div class="pt-3 pb-5  text-center Fondo  row">
+                <h1 class="text-light ps-4 pe-4 mt-5 pt-5 m-auto"
+                    style="font-family: 'Krona One', sans-serif; line-height: 1.6em; font-size: 2.8em;">BIENVENIDO A
+                    CINESTAR, EL
+                    MEJOR LUGAR PARA TU ENTRETENIMIENTO </h1>
+                <div class="mt-4 pt-2 mb-5  pb-5"><a href="#Conocenos" class="btn Boton_01">Conócenos más</a><a
+                        href="#Ofrecer" class="btn Boton_02 ms-5">Nuestros servicios</a></div>
+            </div>
+
+
+
+            <!--Seccion_01----------------------------------------------------------------->
+            <h2 class="text-dark text-center titular mt-5 pt-4">CINESTAR TE OFRECE:</h2>
+            <div class="leggen text-center mb-4">Una mayor calidad de atención y mucho más</div>
+            <div class="d-flex justify-content-evenly align-items-center mb-4">
+
+
+
+                <div class="card w-25 text-center mt-5 mb-5" style="border: none !important;">
+                    <div class="card-img-top text-center">
+                        <div class="Fondo_Ofrece Fondo_01 m-auto"></div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Las mejores pantallas</h5>
+                        <p class="card-text"
+                            style="font-family: 'Josefin Sans', sans-serif; font-weight: 400; color: rgb(105, 102, 102);">
+                            Te aseguramos
+                            que tenemos lo último en tecnología audiovisual para tu disfrute, con una mejor calidad de
+                            pantalla y sonido
+                            envolvente, siempre un paso adelante frente a la competencia. </p>
+                    </div>
+                </div>
+
+
+
+                <div class="card w-25 text-center mt-5 mb-5" style="border: none !important;">
+                    <div class="card-img-top text-center">
+                        <div class="Fondo_Ofrece Fondo_02 m-auto"></div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Chocolatería y variedad </h5>
+                        <p class="card-text"
+                            style="font-family: 'Josefin Sans', sans-serif; font-weight: 400;  color: rgb(105, 102, 102);">
+                            En nuestra
+                            Chocolatería puedes encontrar una gran variedad de productos consumibles, siempre traemos
+                            productos nuevos
+                            para que puedas disfrutar junto con tu película favorita.</p>
+                    </div>
+                </div>
+
+
+                <div class="card w-25 text-center mt-5 mb-5" style="border: none !important;">
+                    <div class="card-img-top text-center">
+                        <div class="Fondo_Ofrece Fondo_03 m-auto"></div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Una atención rápida</h5>
+                        <p class="card-text"
+                            style="font-family: 'Josefin Sans', sans-serif; font-weight: 400;  color: rgb(105, 102, 102);">
+                            Ofrecemos
+                            prioridad a los clientes más habituales que es una forma de demostrar nuestra fidelidad,
+                            pero no nos
+                            olvidamos de nuestros nuevos consumidores, para ellos ofrecemos nuevas ofertas para mantener
+                            su interés.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Seccion_02----------------------------------------------------------------->
+            <div class="row p-0" id="Conocenos">
+                <div class="col-6 bg-primary text-light d-flex justify-content-center align-items-center">
+                    <div class="text-center w-75">
+                        <h1 class="mb-3">MISION:</h1>
+                        <p class="mb-5">Cine Star brinda, orienta integralmente diversión sana, entretenimiento a
+                            personas con
+                            valores, conocimiento competencia mediante distribución de películas, exhibición de
+                            servicios
+                            complementarios obteniendo un adecuado ambiente de desarrollo.</p>
+                    </div>
+                </div>
+                <div class="col-6 p-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Cartelera_Cinestar%2C_Bre%C3%B1a_(2).jpg"
+                        width="100%" alt="">
+                </div>
+            </div>
+
+
+            <div class="row p-0">
+                <div class="col-6 p-0">
+                    <img src="http://bbs.lvye.com/forum/201912/13/105700wbkjyyhcukioru3n.jpg" width="100%" alt="">
+                </div>
+                <div class="col-6 bg-primary text-light d-flex justify-content-center align-items-center">
+                    <div class="text-center w-75">
+                        <h1 class="mb-4">VISION:</h1>
+                        <p>Cine Star hasta el año 2014 será líder en integración de personas con valores y principio de
+                            proyectos
+                            culturales y artísticos con diversidad en el arte a fin de utilizar una mejor claridad de
+                            vida, nuestro fin
+                            es ser reconocido como una empresa de entretenimiento y importante en Colombia.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row p-0">
+                <div class="col-6 bg-primary text-light d-flex justify-content-center align-items-center">
+                    <div class="text-center w-75">
+                        <h1 class="mb-4">HISTORIA:</h1>
+                        <p>
+                            La cadena de CINES STAR es pionera en el nuevo formato de multicines en el Perú, la
+                            ideasurgió hace 30 años
+                            con un inversionista proveniente de La India, quien optó por apostarpor el Perú y
+                            revolucionar el mercado a
+                            fuerza de constancia y trabajo, con nuevastendencias, tanto en construcción como en atención
+                            al cliente. Así
+                            fue como en 1990, logrócomprar su primera sala de cine, el Cine Excelsior, ubicado en el
+                            corazón del Centro
+                            deLima (el Jirón de la Unión). Más tarde, adquirirá los cines Aviación (San Borja),
+                            Benavides(Surco), Las
+                            Américas (Jesús María), Porteño (El Callao) y La Victoria, conformando así laCadena de CINES
+                            STAR
+
+                            La construcción de estos multicines representa una nueva fase para los Cines Star, loscuales
+                            hoy en día se
+                            han convertido en complejos multipantallas de moderno y atractivodiseño, con tecnología de
+                            punta y máxima
+                            comodidad, ya que sus salas cuentan concómodas butacas tipo estadio, que permiten una
+                            perfecta visión desde
+                            cualquier ángulo dela sala y una capacidad mayor a las 1200 personas, quienes disfrutan de
+                            los
+                            estrenoscinematográficos en tiempo real con los estrenos mundiales y con el mejor sonido
+                            DigitalDolby System
+                            y DTS (Digital Theatre System). El soporte técnico se complementa con unambiente climatizado
+                            y un sistema de
+                            iluminación especialmente diseñado para estas salas,para ofrecer al espectador un ambiente
+                            de calidez y
+                            confort.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6 p-0">
+                    <img src="https://az877327.vo.msecnd.net/~/media/images/references/2012/cinestar%20mostar/cinestar%20mostar%20cinema%20lobbyjpg.jpg?v=1&mw=1800&mh=1200"
+                        width="100%" alt="">
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <h2 class="text-dark text-center titular mt-5 pt-5" id="Ofrecer">¿QUÉ TE PODEMOS OFRECER?</h2>
+            <div class="leggen text-center mb-5 pb-5">Encuentra un listado de todo lo que Cinestar tiene para ofrecerte
+            </div>
+
+
+            <div class="row Fondo_Footer pb-5">
+
+                <div class="col-7  ps-4 pe-4 pt-4 mb-0 mt-4">
+                    <div class="border pe-4 ps-4 pt-3 pb-4 h-100 d-flex flex-column justify-content-between bg-light">
+                        <div class="d-flex justify-content-between mb-3 align-items-center">
+                            <h3>Atención al Cliente:</h3>
+                            <div class="IMG_Fondo Fondo_Img_1"></div>
+                        </div>
+                        <p class="mb-4"
+                            style="font-family: 'Josefin Sans', sans-serif; font-weight: 400;  color: rgb(105, 102, 102); text-align: justify;">
+                            Ten a tu disposicion siempre un libro de reclamaciones, donde puedes dar y críticas
+                            constructivas para la
+                            ayuda de nuestro negocio. tu opinión si nos importa y la tomamos en cuenta para cada vez
+                            aspirar a ser
+                            mejores para ti.
+                        </p>
+                        <div class="d-flex flex-wrap">
+                            <a href="#" class="btn btn-primary">Ir a la seccion</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-5  ps-4 pe-4 pt-4 mb-0 mt-4">
+                    <div class="border pe-4 ps-4 pt-3 pb-4 h-100 d-flex flex-column justify-content-between bg-light">
+                        <div class="d-flex justify-content-between mb-3 align-items-center">
+                            <h3>Reserva tu entrada antes:</h3>
+                            <div class="IMG_Fondo Fondo_Img_2"></div>
+                        </div>
+                        <p class="mb-4"
+                            style="font-family: 'Josefin Sans', sans-serif; font-weight: 400;  color: rgb(105, 102, 102); text-align: justify;">
+                            Puedes reservar tus entradas antes de tiempo que en otros establecimientos y al mejor precio
+                            para ti,
+                            siempre estamos pendientes a lo último en estreno para tu disfrute, además mientras más
+                            compres en nuestross
+                            establecimiento más ofertas tendras para los preestrenos.
+                        </p>
+                        <div class="d-flex flex-wrap">
+                            <a href="/entradas/list" class="btn btn-primary">Ir a la seccion</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6  ps-4 pe-4 pt-4 mb-0 mt-4">
+                    <div class="border pe-4 ps-4 pt-3 pb-4 h-100 d-flex flex-column justify-content-between bg-light">
+                        <div class="d-flex justify-content-between mb-3 align-items-center">
+                            <h3>Variedad en Consumibles:</h3>
+                            <div class="IMG_Fondo Fondo_Img_3" onclick="Mostrar_Integrantes(this)"></div>
+                        </div>
+                        <p class="mb-4"
+                            style="font-family: 'Josefin Sans', sans-serif; font-weight: 400;  color: rgb(105, 102, 102); text-align: justify;">
+                            Aquí encuentras todo tipo de dulces como chocolates, caramelos, etc. Para que puedas
+                            degustar además de la
+                            clásica cancha y gaseosa, tambien hay combos y ofertas para la comodidad de comprar y
+                            ahorro.
+                        </p>
+                        <div class="d-flex flex-wrap">
+                            <a href="/productos/list" class="btn btn-primary">Ir a la seccion</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6  ps-4 pe-4 pt-4 mb-0 mt-4">
+                    <div class="border pe-4 ps-4 pt-3 pb-4 h-100 d-flex flex-column justify-content-between bg-light">
+                        <div class="d-flex justify-content-between mb-3 align-items-center">
+                            <h3>Afiliate a nuestro servicio:</h3>
+                            <div class="IMG_Fondo Fondo_Img_4"></div>
+                        </div>
+                        <p class="mb-4"
+                            style="font-family: 'Josefin Sans', sans-serif; font-weight: 400;  color: rgb(105, 102, 102); text-align: justify;">
+                            Puedes crearte una cuenta en nuestra página y sacar un tarjeta especial de Cinestar para que
+                            puedas obtener
+                            ofertas especiales por ser miembro especial además recibirás avisos importantes sobre las
+                            peliculas que se
+                            estrenarán.
+                        </p>
+                        <div class="d-flex flex-wrap">
+                            <a href="/iniciar/sesion" class="btn btn-primary">Ir a la seccion</a>
+                        </div>
+                    </div>
+                </div>
+
+                <%- include('layout/footer'); %>
+</body>
+
+</html>

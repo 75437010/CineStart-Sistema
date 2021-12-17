@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lista | Reservar Productos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon"
+        href="https://mir-s3-cdn-cf.behance.net/projects/404/76d70337835251.Y3JvcCwxNzcyLDEzODQsMCwyNDA.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body
+    style="padding-top: 4rem; background-image: url(https://www.esan.edu.pe/conexion/actualidad/2018/02/28/1500x844_cine.jpg); background-repeat: no-repeat; background-size: cover;"
+    class="min-vh-100 d-flex flex-column justify-content-between">
+    <%- include('layout/menu'); %>
+        <!-- Agregamos el menú, de forma simplificada-->
+
+        <div class="container-xxl min-vh-100 d-flex flex-column justify-content-lg-between">
+            <div class="container pt-5">
+                <div class="row g-0 bg-light position-relative mt-5">
+                    <div class="col-md-6 mb-md-0 p-md-4 d-flex justify-content-lg-center align-items-center">
+
+                        <div class="w-100 h-100"
+                            style="background: url(https://i.ytimg.com/vi/P_111Od3AN8/maxresdefault.jpg) 50% 50% no-repeat; background-size: cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-4 ps-md-0">
+                        <h5 class="mt-0 mb-3">Popcorn</h5>
+                        <p>Aquí puedes encontrar nuestros 5 tipos de cancha popcorn.
+                        <ol>
+                            <li>Popcorn Clásico(con o sin mantequila)</li>
+                            <li>Popcorn Dulce</li>
+                            <li>Popcorn Picante</li>
+                            <li>Popcorn Bacon</li>
+                            <li>Popcorn Parmesano</li>
+                        </ol>
+                        </p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="row g-0 bg-light position-relative mt-5">
+                    <div class="col-md-6 mb-md-0 p-md-4 d-flex justify-content-lg-center align-items-center">
+
+                        <div class="w-100 h-100"
+                            style="background: url(https://cdni.rt.com/actualidad/public_images/2016.02/article/56afe82bc46188be6a8b4606.jpg) 50% 50% no-repeat; background-size: cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-4 ps-md-0 mb-5">
+                        <h5 class="mt-0 mb-3">Gaseosas y refrescos</h5>
+                        <p>Aquí puedes encontrar nuestra variedad de bebidas.
+                        <ol>
+                            <li>Coca Cola</li>
+                            <li>Inka Cola</li>
+                            <li>7up</li>
+                            <li>Fanta</li>
+                            <li>Chicha morada</li>
+                            <li>Limonada</li>
+                            <li>Maracuyá</li>
+                        </ol>
+                        </p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row g-0 bg-light position-relative mt-5">
+                    <div class="col-md-6 mb-md-0 p-md-4">
+
+                        <div class="w-100 h-100"
+                            style="background: url(https://i2.wp.com/www.frentecreativo.com/wp-content/uploads/2019/04/marcas-dulces-mexicanos.jpg?resize=1280%2C720&ssl=1) 50% 50% no-repeat; background-size: cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-4 ps-md-0">
+                        <h5 class="mt-0 mb-3">Dulces</h5>
+                        <p class="mb-5">Aquí puedes encontrar una lista de dulces que puedes consumir mientras disfrutas
+                            de tu película.
+                        <ol>
+                            <li>Snickers</li>
+                            <li>TikTak</li>
+                            <li>M&M</li>
+                            <li>Gomitas Mogui</li>
+                            <li>Oreo</li>
+                            <li>Wafer</li>
+                        </ol>
+                        </p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="container mt-5">
+                    <div class="card">
+                        <div class="card-header text-center bg-danger text-light display-4">LISTA DE REVERVAS DE
+                            PRODUCTOS</div>
+                        <div class="card-body">
+
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <td>IDPRODUCTO</td>
+                                    <td>NOMBRE Y APELLIDO</td>
+                                    <td>DNI</td>
+                                    <td>TIPO DE PRODUCTO</td>
+                                    <td>CANTIDAD</td>
+                                    <td>COMBOS</td>
+                                    <td>ACCIONES</td>
+                                </thead>
+                                <tbody>
+                                    <% if(dataProductos.length){ %>
+                                        <% dataProductos.forEach( item=>{ %>
+                                            <tr>
+                                                <td>
+                                                    <%= item.idProducto %>
+                                                </td>
+                                                <td>
+                                                    <%= item.nombApellido %>
+                                                </td>
+                                                <td>
+                                                    <%= item.dni %>
+                                                </td>
+                                                <td>
+                                                    <%= item.tipoProducto %>
+                                                </td>
+                                                <td>
+                                                    <%= item.cantidad %>
+                                                </td>
+                                                <td>
+                                                    <%= item.combos %>
+                                                </td>
+                                                <td><a class="btn btn-warning"
+                                                        href="/productos/form/<%= item.idProducto %>">EDITAR</a></td>
+                                            </tr>
+                                            <% }) %>
+                                                <% } %>
+                                </tbody>
+                            </table>
+                            <a class="btn btn-success" href="/productos/form/0">REGISTRARSE</a>
+                        </div>
+                    </div>
+                </div>
+                <%- include('layout/footer'); %>
+</body>
+
+</html>

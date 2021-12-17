@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Iniciar Sesión | CineStar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon"
+        href="https://mir-s3-cdn-cf.behance.net/projects/404/76d70337835251.Y3JvcCwxNzcyLDEzODQsMCwyNDA.png">
+</head>
+
+<body
+    style="background-color: #dcdde1; background: url(https://www.baiteee.com/wp-content/uploads/2016/10/20160214122123.jpg); background-size: cover;">
+    <div style="padding-left: 20px; padding-top: 20px;">
+        <a class="btn" href="/inicio" style="color: rgb(0, 0, 0); background: #ffd000; width: 6%;"> ← Volver</a>
+    </div>
+    <br><br><br><br>
+    <center>
+        <table width="40%">
+            <tr>
+                <td>
+                    <div class="container mt-5">
+                        <div class="card">
+                            <div class="card-header text-center display-4"
+                                style=" color: rgb(255, 255, 255); background-color: #ff0000;">
+                                Iniciar Sesión
+                            </div>
+
+                            <div class="card-body">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <center>
+                                                    <input type="text" class="form-control" id="txtAlumno"
+                                                        placeholder="Usuario o correo electrónico" name="alumno"
+                                                        style="width: 55%;">
+                                                    <br>
+                                                    <input type="text" class="form-control" id="txtAlumno"
+                                                        placeholder="Contraseña" name="alumno" style="width: 55%;">
+                                                    <br>
+                                                    <a class="btn" href="/inicio"
+                                                        style="color: whitesmoke; background: #344adb; width: 50%;">Iniciar
+                                                        Sesión</a>
+                                                </center>
+                                            </td>
+                                        </tr>
+                                        <!-- <tr>
+                            <td>
+                            </td>
+                        </tr> -->
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <%- include('layout/footer'); %>
+</body>

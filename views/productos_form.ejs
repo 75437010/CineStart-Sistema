@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Formulario | Reservar productos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon"
+        href="https://mir-s3-cdn-cf.behance.net/projects/404/76d70337835251.Y3JvcCwxNzcyLDEzODQsMCwyNDA.png">
+    <!-- bootstrap para la página-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body
+    style="padding-top: 4rem; background-image: url(https://termometro.cl/wp-content/uploads/2021/07/900x600.jpeg); background-repeat: no-repeat; background-size: cover;"
+    class="min-vh-100 d-flex flex-column justify-content-between">
+    <%- include('layout/menu'); %>
+
+        <div class="container mt-5">
+            <div class="card">
+
+                <div class="card-header text-center bg-danger text-light display-4">SEPARA TU PEDIDO</div>
+                <div class="card-body">
+                    <form action="/productos/save" method="post">
+                        <div class="form-group">
+                            <label for="txtidCliente">IDPRODUCTO</label>
+                            <input type="text" class="form-control" id="txtidProducto" name="idProducto"
+                                value="<%= productosForm.idProducto %>" readonly> <!-- readonly = solo lectura -->
+                        </div>
+                        <div class="form-group">
+                            <label for="txtnombApellido">NOMBRES Y APELLIDOS</label>
+                            <input type="text" class="form-control" id="txtnombApellido" name="nombApellido"
+                                value="<%= productosForm.nombApellido %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtdni">DNI</label>
+                            <input type="text" class="form-control" id="txtdni" name="dni"
+                                value="<%= productosForm.dni %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="txttipoProducto">TIPO DE PRODUCTO</label>
+                            <select class="form-control" id="txttipoProducto" name="tipoProducto"
+                                value="<%= productosForm.tipoProducto %>">
+                                <option>Popcorn Clásico(con o sin mantequila)</option>
+                                <option>Popcorn Dulce</option>
+                                <option>Popcorn Picante</option>
+                                <option>Popcorn Bacon</option>
+                                <option>Popcorn Parmesano</option>
+                                <option>Coca Cola</option>
+                                <option>Inka Cola</option>
+                                <option>7up</option>
+                                <option>Fanta</option>
+                                <option>Chicha morada</option>
+                                <option>Limonada</option>
+                                <option>Maracuyá</option>
+                                <option>Snickers</option>
+                                <option>TikTak</option>
+                                <option>M&M</option>
+                                <option>Gomitas Mogui</option>
+                                <option>Oreo</option>
+                                <option>Wafer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtcantidad">CANTIDAD</label>
+                            <input type="text" class="form-control" id="txtcantidad" name="cantidad"
+                                value="<%= productosForm.cantidad %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtcombos">COMBOS</label>
+                            <select class="form-control" id="txtcombos" name="combos"
+                                value="<%= productosForm.combos %>">
+                                <option>ESCOGER COMBO</option>
+                                <option>COMBO 1: 1 CANCHITA MEDIANA C/SAL + 1 GASEOSA MEDIANA</option>
+                                <option>COMBO 2: 1 CANCHITA GRANDE C/SAL + 2 GASEOSAS GRANDES</option>
+                                <option>COMBO 3: 1 CANCHITA GRANDE C/SAL + 1 GASEOSA MEDIANA</option>
+                                <option>COMBO 4: 2 CANCHITAS GRANDES SALADAS + 2 GASEOSAS GRANDES</option>
+                                <option>COMBO 5: 3 CANCHITAS MEDIANAS SALADAS + 3 GASEOSAS MEDIANAS</option>
+                            </select>
+                        </div>
+                        <input type="submit" class="btn btn-success" value="GUARDAR">
+                        <a href="/productos/list" class="btn btn-danger">CANCELAR</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('layout/footer'); %>
+</body>
+
+</html>
